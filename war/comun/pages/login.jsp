@@ -12,12 +12,12 @@
 	<title>iFactura</title>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
 	<!-- Bootstrap Core CSS -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../proveedor/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="../css/login.css" rel="stylesheet">
-	<link href="../css/animate-custom.css" rel="stylesheet"> 
+	<link href="../../proveedor/css/login.css" rel="stylesheet">
+	<link href="../../proveedor/css/animate-custom.css" rel="stylesheet"> 
 	<!-- Custom Fonts -->
-	<link href="../fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="../../proveedor/fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -32,7 +32,7 @@
 			<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 animated flipInY">
 				<div class="login-box clearfix" style="padding-top: 40px; padding-bottom: 50px;">
 					<div class="login-logo">
-						<img src="../images/logo.png" alt="iFactura" style="width: 45%;">
+						<img src="../../proveedor/images/logo.png" alt="iFactura" style="width: 45%;">
 					</div> 
 					<hr>
 					<div class="login-form" style="margin-top: 16px;">
@@ -121,9 +121,9 @@
 		<p id="footer-text"><small>Copyright © 2016 iFactura. Todos los derechos reservados</small></p>
 	</footer>
 	<!-- jQuery -->
-	<script src="../js/jquery.min.js"></script>
+	<script src="../../proveedor/js/jquery.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/login.js"></script>
+	<script src="../../proveedor/js/bootstrap.min.js"></script>
+	<script src="../../proveedor/js/login.js"></script>
 </body>
 </html>
