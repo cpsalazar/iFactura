@@ -1,3 +1,36 @@
+#################
+## Eclipse
+#################
+
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.class
+local.properties
+.classpath
+.settings/
+.loadpath
+war/WEB-INF/appengine-generated/
+war/WEB-INF/classes/
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
