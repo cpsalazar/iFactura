@@ -32,6 +32,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>ISST_G09_Investigacion</servlet-name>
+		<servlet-class>ifactura.proveedor.servlet.ISST_G09_InvestigacionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ISST_G09_Investigacion</servlet-name>
+		<url-pattern>/investigacion</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>ISST_G09_NuevaSubasta</servlet-name>
 		<servlet-class>ifactura.proveedor.servlet.ISST_G09_NuevaSubastaServlet</servlet-class>
 	</servlet>
