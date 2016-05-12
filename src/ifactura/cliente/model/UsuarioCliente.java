@@ -23,6 +23,12 @@ public class UsuarioCliente implements Serializable {
 
 	/** The usuario. */
 	private String usuario;
+	
+	
+	public UsuarioCliente(String usuario) {
+		super();
+		this.usuario = usuario;
+	}
 
 	/**
 	 * Gets the id.

@@ -1,5 +1,7 @@
 package ifactura.cliente.dao;
 
+import java.util.List;
+
 import ifactura.cliente.model.FacturaTelefono;
 
 public interface FacturaTelefonoDao {
@@ -38,5 +40,8 @@ public interface FacturaTelefonoDao {
 	 * @return the usuario
 	 */
 	FacturaTelefono getUsuario(Long idFactura);
+	
+	public List<FacturaTelefono> readFacturas();
+	
 
 }

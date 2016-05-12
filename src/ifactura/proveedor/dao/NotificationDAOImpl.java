@@ -42,6 +42,7 @@ public class NotificationDAOImpl implements NotificationDAO{
 		Query q = em.createQuery("select t from Notification t");
 
 		List<Notification> notificaciones = q.getResultList();
+		notificaciones.size();
 		em.close();
 		return notificaciones;
 	}
@@ -55,6 +56,7 @@ public class NotificationDAOImpl implements NotificationDAO{
 	    q.setParameter("correo", correo);
 
 		List<Notification> notificaciones = q.getResultList();
+		notificaciones.size();
 		em.close();
 		return notificaciones;
 	}
@@ -91,6 +93,7 @@ public class NotificationDAOImpl implements NotificationDAO{
 		if (not == null){
 			throw new Exception("No se encuentra la notificacion con id: " + texto);
 		}
+		em.close();
 		return not;
 	}
 }

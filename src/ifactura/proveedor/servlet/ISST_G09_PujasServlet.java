@@ -29,7 +29,7 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 		} catch (Exception e) {
 	
 		}
-		
+
 		IFacturaDAO dao = IFacturaDAOImpl.getInstance();
 		UsersDAO dao1 = UsersDAOImpl.getInstance();
 		NotificationDAO dao2 = NotificationDAOImpl.getInstance();
@@ -37,13 +37,19 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 		String alerta = null;
 		//alerta = "Para que tu puja sea válida debe debe ser múltiplo de 25 céntimos";
 	
-		List<IFactura> subasta = dao.readIFactura_id((long) mensaje);
-		List<Users> usuariog = dao1.readCompania(subasta.get(0).getGanadorActual());
-		if (subasta.get(0).getPujaActual() < Double.parseDouble(req.getParameter("puja"))) {
+		IFactura subasta = null;
+		try {
+			subasta = dao.readIFactura_id((long) mensaje);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		List<Users> usuariog = dao1.readCompania(subasta.getGanadorActual());
+		if (subasta.getPujaActual() < Double.parseDouble(req.getParameter("puja"))) {
 			alerta = "La puja introducida debe mejorar la actual";
 		} else if ((Double.parseDouble(req.getParameter("puja")) > 0) && ((Double.parseDouble(req.getParameter("puja"))*4)%1 == 0)) {	
-			subasta.get(0).setPujaActual(Double.parseDouble (req.getParameter("puja")));
-			texto = subasta.get(0).getGanadorActual()+texto;
+			subasta.setPujaActual(Double.parseDouble (req.getParameter("puja")));
+			texto = subasta.getGanadorActual()+texto;
 			String user = req.getUserPrincipal().getName();
 			String compania = null;
 			try {
@@ -55,8 +61,8 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 			if (usuariog.size() > 0) {
 				dao2.create(usuariog.get(0).getCorreo().toString(), texto, titulo, imagen);
 			}
-			subasta.get(0).setGanadorActual(compania);
-			dao.update(subasta.get(0));
+			subasta.setGanadorActual(compania);
+			dao.update(subasta);
 			alerta = "Vas ganando la subasta";
 		}
 
@@ -74,17 +80,23 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 		boolean aux = false;
 		
 		if (usuario != null){
-			List<String> participantes = subasta.get(0).getParticipantes();
-			if (participantes.size()>0){
-				for (int i=0; i<participantes.size(); i++){
-					if (participantes.get(i).equals(usuario.getCorreo())){
-						aux = true;
+			List<String> participantes = new ArrayList<String>();
+			try {
+				participantes = subasta.getParticipantes();
+				if (participantes.size()>0){
+					for (int i=0; i<participantes.size(); i++){
+						if (participantes.get(i).equals(usuario.getCorreo())){
+							aux = true;
+						}
 					}
 				}
-			}
-			if (aux == false){
-				subasta.get(0).setParticipantes(usuario.getCorreo());
-				dao.update(subasta.get(0));
+				if (aux == false){
+					subasta.setParticipantes(usuario.getCorreo());
+					dao.update(subasta);
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 		

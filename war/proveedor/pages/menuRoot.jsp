@@ -34,6 +34,13 @@
 							</a>
 						</li>
 						<li>
+							<a href="/investigacion">
+								<i class="fa fa-wpforms"></i>
+								Búsqueda de Patrones
+								<span class="fa fa-chevron-down"></span>
+							</a>
+						</li>
+						<li>
 							<a href="/proveedor/pages/nuevaSubasta.jsp">
 								<i class="fa fa-edit"></i>
 								Crear subasta

@@ -15,6 +15,7 @@ public class IFactura implements Serializable {
 	private int numUsuarios;
 	private long fechaFin;
 	private double pujaActual;
+	private boolean informado;
 	private String ganadorActual;
 	private List<String> participantes;
 	
@@ -25,6 +26,7 @@ public class IFactura implements Serializable {
 		this.numUsuarios = numUsuarios;
 		this.fechaFin = fechaFin;
 		this.pujaActual = pujaActual;
+		this.informado = false;
 		this.ganadorActual = ganadorActual;
 		this.participantes = participantes;
 	}
@@ -67,6 +69,14 @@ public class IFactura implements Serializable {
 
 	public void setPujaActual(double pujaActual) {
 		this.pujaActual = pujaActual;
+	}
+	
+	public boolean getInformado() {
+		return this.informado;
+	}
+
+	public void setInformado(boolean informado) {
+		this.informado = informado;
 	}
 
 	public String getGanadorActual() {

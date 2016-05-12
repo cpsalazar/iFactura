@@ -71,6 +71,7 @@ public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
 		} else {
 			// Si llega a este punto tenemos un problema
 		}
+		usuarios.size();
 		em.close();
 		return usuarioReturn;
 	}

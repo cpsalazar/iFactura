@@ -3,7 +3,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -64,11 +72,15 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 		RequestDispatcher view = req.getRequestDispatcher("/proveedor/pages/login.jsp");
 
 		if (req.getUserPrincipal() != null) {
+			
+			user = req.getUserPrincipal().getName();
 	
 			if  (dao.readIFactura().size() > 0){
 				listsubas = dao.readIFactura();
 				for (IFactura f : listsubas) {
-					if(f.getFechaFin() < new Date().getTime()) {
+					if(f.getFechaFin() < new Date().getTime() && !f.getInformado()) {
+						f.setInformado(true);
+						dao.update(f);
 						texto = move+", ha finalizado la subasta ("+f.getDescripcion()+").";
 						daonot.create(mov, texto, titulo, imagen);
 						texto = vode+", ha finalizado la subasta ("+f.getDescripcion()+").";
@@ -77,11 +89,31 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 						daonot.create(ora, texto, titulo, imagen);
 						texto = yoie+", ha finalizado la subasta ("+f.getDescripcion()+").";
 						daonot.create(yoi, texto, titulo, imagen);
+						
+						if (f.getGanadorActual() != null){
+							Properties props = new Properties();
+							Session session = Session.getDefaultInstance(props, null);
+
+							String msgBody = "Ha ganado la subasta (" + f.getDescripcion() + "), nos pondremos en contacto con usted para que nos indique la oferta que le realizará a los usuarios que comprenden la subasta. Recuerde que estos usuarios permanecerán en el anonimato";
+
+							try {
+								Message msg = new MimeMessage(session);
+								msg.setFrom(new InternetAddress("subasta@ifactura-proveedor.appspotmail.com", "iFactura"));
+								msg.addRecipient(Message.RecipientType.TO, new InternetAddress(dao1.readCompania(f.getGanadorActual()).get(0).getCorreo(), f.getGanadorActual()));
+								msg.setSubject("Ganador subasta");
+								msg.setText(msgBody);
+								Transport.send(msg);
+
+							    } catch (AddressException e) {
+							        // ...
+							    } catch (MessagingException e) {
+							        // ...
+							    }
+						}
 					}
 				}
 			}
 			
-			user = req.getUserPrincipal().getName();
 			if (daonot.readCorreo(user).size() > 0){
 				try {					
 					req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
@@ -113,21 +145,6 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			if  (dao.readIFactura().size() > 0){
-				         listsubas = dao.readIFactura();
-				         for (IFactura f : listsubas) {
-				           if(f.getFechaFin() < new Date().getTime()) {
-				             daonot.create(mov, texto, titulo, imagen);
-				             texto = vode+", ha finalizado una subasta.";
-				             daonot.create(vod, texto, titulo, imagen);
-				             texto = orae+", ha finalizado una subasta.";
-				             daonot.create(ora, texto, titulo, imagen);
-				             texto = yoie+", ha finalizado una subasta.";
-				             daonot.create(yoi, texto, titulo, imagen);
-				           }
-				         }
-				       }
 			
 			url = userService.createLogoutURL(req.getRequestURI());
 			urlLinktext = "Logout";

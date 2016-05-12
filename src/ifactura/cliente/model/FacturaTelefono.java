@@ -26,25 +26,41 @@ public class FacturaTelefono implements Serializable {
 	private Date fechaFacturacion;
 
 	/** The datos contradados. */
-	private Float datosContradados;
+	private double datosContradados;
 
 	/** The datos consumidos. */
-	private Float datosConsumidos;
+	private double datosConsumidos;
 
 	/** The voz contradada. */
-	private Float vozContradada;
+	private double vozContradada;
 
 	/** The voz consumida. */
-	private Float vozConsumida;
+	private double vozConsumida;
 
 	/** The importe total. */
-	private Float importeTotal;
+	private double importeTotal;
 
 	/** The id usuario. */
 	private Long idUsuario;
 
 	/** The es tarde. */
 	private Boolean esTarde;
+	
+	
+	
+	public FacturaTelefono(Date fechaFacturacion, Double datosContradados,
+			Double datosConsumidos, Double vozContradada, Double vozConsumida,
+			Double importeTotal, Long idUsuario, Boolean esTarde) {
+		super();
+		this.fechaFacturacion = fechaFacturacion;
+		this.datosContradados = datosContradados;
+		this.datosConsumidos = datosConsumidos;
+		this.vozContradada = vozContradada;
+		this.vozConsumida = vozConsumida;
+		this.importeTotal = importeTotal;
+		this.idUsuario = idUsuario;
+		this.esTarde = esTarde;
+	}
 
 	/**
 	 * Gets the id.
@@ -89,7 +105,7 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the datosContradados
 	 */
-	public Float getDatosContradados() {
+	public double getDatosContradados() {
 		return datosContradados;
 	}
 
@@ -99,7 +115,7 @@ public class FacturaTelefono implements Serializable {
 	 * @param datosContradados
 	 *            the datosContradados to set
 	 */
-	public void setDatosContradados(Float datosContradados) {
+	public void setDatosContradados(Double datosContradados) {
 		this.datosContradados = datosContradados;
 	}
 
@@ -108,7 +124,7 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the datosConsumidos
 	 */
-	public Float getDatosConsumidos() {
+	public Double getDatosConsumidos() {
 		return datosConsumidos;
 	}
 
@@ -118,7 +134,7 @@ public class FacturaTelefono implements Serializable {
 	 * @param datosConsumidos
 	 *            the datosConsumidos to set
 	 */
-	public void setDatosConsumidos(Float datosConsumidos) {
+	public void setDatosConsumidos(Double datosConsumidos) {
 		this.datosConsumidos = datosConsumidos;
 	}
 
@@ -127,7 +143,7 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the vozContradada
 	 */
-	public Float getVozContradada() {
+	public Double getVozContradada() {
 		return vozContradada;
 	}
 
@@ -137,7 +153,7 @@ public class FacturaTelefono implements Serializable {
 	 * @param vozContradada
 	 *            the vozContradada to set
 	 */
-	public void setVozContradada(Float vozContradada) {
+	public void setVozContradada(Double vozContradada) {
 		this.vozContradada = vozContradada;
 	}
 
@@ -146,7 +162,7 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the vozConsumida
 	 */
-	public Float getVozConsumida() {
+	public Double getVozConsumida() {
 		return vozConsumida;
 	}
 
@@ -156,7 +172,7 @@ public class FacturaTelefono implements Serializable {
 	 * @param vozConsumida
 	 *            the vozConsumida to set
 	 */
-	public void setVozConsumida(Float vozConsumida) {
+	public void setVozConsumida(Double vozConsumida) {
 		this.vozConsumida = vozConsumida;
 	}
 
@@ -165,7 +181,7 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the importeTotal
 	 */
-	public Float getImporteTotal() {
+	public Double getImporteTotal() {
 		return importeTotal;
 	}
 
@@ -175,7 +191,7 @@ public class FacturaTelefono implements Serializable {
 	 * @param importeTotal
 	 *            the importeTotal to set
 	 */
-	public void setImporteTotal(Float importeTotal) {
+	public void setImporteTotal(Double importeTotal) {
 		this.importeTotal = importeTotal;
 	}
 

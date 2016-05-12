@@ -44,6 +44,7 @@ public class UsersDAOImpl implements UsersDAO {
 		Query q = em.createQuery("select t from Users t");
 
 		List<Users> usuarios = q.getResultList();
+		usuarios.size();
 		em.close();
 		return usuarios;
 	}
@@ -56,6 +57,7 @@ public class UsersDAOImpl implements UsersDAO {
 		if (user == null){
 			throw new Exception("No se encuentra el User con correo: " + correo);
 		}
+		em.close();
 		return user;
 	}
 
@@ -68,6 +70,7 @@ public class UsersDAOImpl implements UsersDAO {
 	    q.setParameter("compania", compania);
 
 		List<Users> usuarios = q.getResultList();
+		usuarios.size();
 		em.close();
 		return usuarios;
 	}
