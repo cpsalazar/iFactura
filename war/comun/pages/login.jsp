@@ -30,90 +30,25 @@
 	<div class="container" id="login-block">
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 animated flipInY">
-				<div class="login-box clearfix" style="padding-top: 40px; padding-bottom: 50px;">
+				<div class="login-box clearfix" style="padding-top: 40px; padding-bottom: 50px; margin-top: 40%;">
 					<div class="login-logo">
 						<img src="../../proveedor/images/logo.png" alt="iFactura" style="width: 45%;">
 					</div> 
 					<hr>
 					<div class="login-form" style="margin-top: 16px;">
-						<!-- Start Error box -->
-						<div class="alert alert-danger hide">
-							<button type="button" class="close" data-dismiss="alert"> ×</button>
-							<h4>Error</h4>Mensaje de error
-						</div>
-						<!-- End Error box -->
 						<div style="width: 200px; margin: 0 auto;">
-							<!--<c:if test="${user != null}">
-								<c:out value="${user}" />
-								<p>Puedes pulsar el siguiente enlace para salir</p>
-							</c:if>
-							<c:if test="${user == null}">
-								<p>Puedes pulsar el siguiente enlace para registrarte</p>
-							</c:if>-->
-							<a class="btn azm-social azm-btn azm-border-bottom azm-google" href="">
+							<a class="btn azm-social azm-btn azm-border-bottom azm-google" href="" style="width: 200px;">
 								Aplicación Cliente
 							</a>
 						</div>
-						<hr>
 						<div style="width: 200px; margin: 0 auto;">
-							<!--<c:if test="${user != null}">
-								<c:out value="${user}" />
-								<p>Puedes pulsar el siguiente enlace para salir</p>
-							</c:if>
-							<c:if test="${user == null}">
-								<p>Puedes pulsar el siguiente enlace para registrarte</p>
-							</c:if>-->
-							<a class="btn azm-social azm-btn azm-border-bottom azm-google" href="/isst_g09_ifactura"/>
+							<a class="btn azm-social azm-btn azm-border-bottom azm-google" href="/isst_g09_ifactura" style="width: 200px;"/>
 								Aplicación Proveedor
 							</a>
 						</div>
 					</div>
-					<div class="register-form" style="margin-top: 16px; display: none;">
-						<!-- Start Error box -->
-						<div class="alert alert-danger hide">
-							<button type="button" class="close" data-dismiss="alert"> ×</button>
-							<h4>Error</h4>Mensaje de error
-						</div>
-						<!-- End Error box -->
-						<form action="#" method="get">
-							<input type="text" placeholder="Nombre y Apellidos" class="input-field" required=""> 
-							<input type="text" placeholder="Correo electrónico" class="input-field" required=""> 
-							<input type="password" placeholder="Contraseña" class="input-field" required="">
-							<input type="password" placeholder="Confirmar contraseña" class="input-field" required=""> 
-							<label class="checkbox">
-								<input type="checkbox" value="option1" required=""> Acepto los <a href="#openModal">términos y condiciones</a>
-							</label>
-							<button type="submit" class="btn btn-login" style="margin-bottom: 0;">Registrarme</button> 
-						</form>
-					</div>
-					<div class="password-form" style="margin-top: 16px; display: none;">
-						<!-- Start Error box -->
-						<div class="alert alert-danger hide">
-							<button type="button" class="close" data-dismiss="alert"> ×</button>
-							<h4>Error</h4>Mensaje de error
-						</div>
-						<!-- End Error box -->
-						<form action="#" method="get">
-							<p id="pw">Introduce tu correo electrónico y te enviaremos un enlace para resetear tu contraseña</p>
-							<input type="text" placeholder="Correo electrónico" class="input-field" required=""> 
-							<button type="submit" class="btn btn-login" style="margin-bottom: 0;">Enviar</button> 
-						</form>
-					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div id="openModal" class="modalDialog">
-		<div class="col-xs-4 col-xs-offset-4">
-			<a href="#close" title="Close" class="close">X</a>
-			<h2 style="margin-top: 0;"><strong>Términos y condiciones</strong></h2>
-			<h4><strong>Complaints</strong></h4>
-			<p>Any complaints about items or sellers may be sent to our support team: support@wesellyourstuff.com or (888) 555-0198.
-			There is no guarantee of a resolution. Each case will be looked at individually, and the seller will be in contact as well.</p>
-			<h4><strong>Legalities</strong></h4>
-			<p>blablablablablablabla blablabla blablablabla blablalablablablabla</p>
-			<p>blablablablablablabla blablabla blablablabla blablalablablablabla</p>
-			<p><strong>These terms and conditions are subject to change</strong></p>
 		</div>
 	</div>
 	<!-- End Login box -->

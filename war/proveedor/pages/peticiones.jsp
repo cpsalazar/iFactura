@@ -58,10 +58,10 @@
 										
 										<div class="form-group">
 											<label>Exprese brevemente los criterios bajo los cuales le gustaría que se crease una subasta</label>
-											<textarea name="peticion" class="form-control" rows="6" style="float: none; border-radius: 4px; max-width: 82vw;"></textarea>
+											<textarea name="peticion" class="form-control" rows="6" required style="float: none; border-radius: 4px; max-width: 82vw;"></textarea>
 											<input class="btn btn-primary" value="Enviar" type="submit" style="margin-top: 5px;"></input>
 											<label class="checkbox-inline">
-												<input value="agree" type="checkbox"></input>Acepto los <a href=#openModal>términos y condiciones</a>
+												<input value="agree" type="checkbox" required></input>Acepto los <a href=#openModal>términos y condiciones</a>
 											</label>
 											<div id="openModal" class="modalDialog">
 												<div class="col-xs-6 col-xs-offset-3" style="transform: translateY(50%);">
