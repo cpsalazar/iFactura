@@ -91,22 +91,27 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 			} else {
 				req.getSession().setAttribute("notificaciones", null);
 			}
-			if (dao1.readCorreo(user).size() > 0){
-				try {
-					List<Peticiones> comprobacion = dao2.readCorreo(user);
-					if (comprobacion.size() > 0){
-						req.getSession().setAttribute("peticion", new ArrayList<Peticiones>(dao2.readCorreo(user)));
-					} else {
-						req.getSession().setAttribute("peticion", null);
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}			
-				compania = dao1.readCorreo(user).get(0).getCompania();
-				//req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
-			} else {
-				user = null;
-				req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicacion");
+			try {
+				if (dao1.readCorreo(user) != null){
+					try {
+						List<Peticiones> comprobacion = dao2.readCorreo(user);
+						if (comprobacion.size() > 0){
+							req.getSession().setAttribute("peticion", new ArrayList<Peticiones>(dao2.readCorreo(user)));
+						} else {
+							req.getSession().setAttribute("peticion", null);
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
+					}			
+					compania = dao1.readCorreo(user).getCompania();
+					//req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
+				} else {
+					user = null;
+					req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicacion");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			
 			if  (dao.readIFactura().size() > 0){

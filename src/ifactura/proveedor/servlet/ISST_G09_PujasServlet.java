@@ -45,7 +45,13 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 			subasta.get(0).setPujaActual(Double.parseDouble (req.getParameter("puja")));
 			texto = subasta.get(0).getGanadorActual()+texto;
 			String user = req.getUserPrincipal().getName();
-			String compania = dao1.readCorreo(user).get(0).getCompania();
+			String compania = null;
+			try {
+				compania = dao1.readCorreo(user).getCompania();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			if (usuariog.size() > 0) {
 				dao2.create(usuariog.get(0).getCorreo().toString(), texto, titulo, imagen);
 			}
@@ -58,20 +64,26 @@ public class ISST_G09_PujasServlet extends HttpServlet {
 		req.getSession().setAttribute("alerta", alerta);
 		req.getSession().setAttribute("subastas", new ArrayList<IFactura>(dao.readIFactura()));
 		
-		List<Users> usuarios = dao1.readCorreo(req.getUserPrincipal().getName());
+		Users usuario = null;
+		try {
+			usuario = dao1.readCorreo(req.getUserPrincipal().getName());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		boolean aux = false;
 		
-		if (usuarios.size()>0){
+		if (usuario != null){
 			List<String> participantes = subasta.get(0).getParticipantes();
 			if (participantes.size()>0){
 				for (int i=0; i<participantes.size(); i++){
-					if (participantes.get(i).equals(usuarios.get(0).getCorreo())){
+					if (participantes.get(i).equals(usuario.getCorreo())){
 						aux = true;
 					}
 				}
 			}
 			if (aux == false){
-				subasta.get(0).setParticipantes(usuarios.get(0).getCorreo());
+				subasta.get(0).setParticipantes(usuario.getCorreo());
 				dao.update(subasta.get(0));
 			}
 		}

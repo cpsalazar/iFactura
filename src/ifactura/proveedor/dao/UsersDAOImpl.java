@@ -49,16 +49,14 @@ public class UsersDAOImpl implements UsersDAO {
 	}
 
 	@Override
-	public List<Users> readCorreo(String correo) {
+	public Users readCorreo(String correo) throws Exception{
 		
 		EntityManager em = EMFService.get().createEntityManager();
-		
-		Query q = em.createQuery("select t from Users t where t.correo = :correo");
-	    q.setParameter("correo", correo);
-
-		List<Users> usuarios = q.getResultList();
-		em.close();
-		return usuarios;
+		Users user = em.find(Users.class, correo);
+		if (user == null){
+			throw new Exception("No se encuentra el User con correo: " + correo);
+		}
+		return user;
 	}
 
 	@Override
