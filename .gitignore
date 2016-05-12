@@ -13,7 +13,6 @@ tmp/
 *~.nib
 *.class
 local.properties
-.classpath
 .settings/
 .loadpath
 war/WEB-INF/appengine-generated/
