@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import ifactura.emf.EMFService;
 import ifactura.proveedor.model.Peticiones;
 
 public class PeticionesDAOImpl implements PeticionesDAO {

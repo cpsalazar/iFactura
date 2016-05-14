@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
+
+import ifactura.emf.EMFService;
 import ifactura.proveedor.model.Notification;
 
 public class NotificationDAOImpl implements NotificationDAO{

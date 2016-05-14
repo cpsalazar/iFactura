@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import ifactura.cliente.model.UsuarioCliente;
+import ifactura.emf.EMFService;
 
 public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
 

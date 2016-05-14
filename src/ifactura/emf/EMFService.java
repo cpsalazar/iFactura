@@ -1,4 +1,4 @@
-package ifactura.proveedor.dao;
+package ifactura.emf;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

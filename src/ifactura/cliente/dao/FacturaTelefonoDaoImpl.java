@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import ifactura.cliente.model.FacturaTelefono;
+import ifactura.emf.EMFService;
 
 public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 	/** The instance. */
