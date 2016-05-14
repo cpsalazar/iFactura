@@ -104,7 +104,7 @@
 					<a href="#" id="register-form-link">
 						<p style="margin: 0;">¿No tienes una cuenta? <strong>Regístrate</strong></p>
 					</a>
-					<a href="ifactura-web.appspot.com" style="display: block;">
+					<a href="/comun/pages/login.jsp" style="display: block;">
 						<p style="margin: 0;">Volver</p>
 					</a>
 				</div>

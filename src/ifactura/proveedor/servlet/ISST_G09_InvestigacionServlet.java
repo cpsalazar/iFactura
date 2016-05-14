@@ -1,4 +1,5 @@
 package ifactura.proveedor.servlet;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setCharacterEncoding("UTF-8");
 		
-		//Bï¿½SQUEDA DE PATRONES
+		//BUSQUEDA DE PATRONES
 		
 		req.getSession().setAttribute("DatosdeMas", null);
 		req.getSession().setAttribute("VozdeMas", null);
@@ -33,7 +34,7 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 		double totalvoz = 0;
 		double totaltarde = 0;
 		double totalmananas = 0;
-				
+		
 		for (FacturaTelefono fac: facturas){
 			
 			if (fac.getDatosConsumidos() > fac.getDatosContradados()){
@@ -61,11 +62,11 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 		System.out.println(totalmananas);
 		
 		if (totaldatos > facturas.size()/20){
-			String texto = "Se han detectado " + totaldatos + " clientes que consumen  más datos de los contratados, y que de media consumen " + DatosMedia + " MB.";
+			String texto = "Se han detectado " + totaldatos + " clientes que consumen  mns datos de los contratados, y que de media consumen " + DatosMedia + " MB.";
 			req.getSession().setAttribute("DatosdeMas", texto);
 		}
 		if (totalvoz > facturas.size()/20){
-			String texto = "Se han detectado " + totalvoz + " clientes que consumen  más minutos de los contratados, y que de media consumen " + VozMedia + " minutos.";
+			String texto = "Se han detectado " + totalvoz + " clientes que consumen  mns minutos de los contratados, y que de media consumen " + VozMedia + " minutos.";
 			req.getSession().setAttribute("VozdeMas", texto);
 		}
 		if (totaltarde > facturas.size()/20){

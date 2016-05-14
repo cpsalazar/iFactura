@@ -43,7 +43,6 @@ public class PeticionesDAOImpl implements PeticionesDAO {
 		Query q = em.createQuery("select t from Peticiones t");
 
 		List<Peticiones> peticiones = q.getResultList();
-		peticiones.size();
 		em.close();
 		return peticiones;
 	}
@@ -56,7 +55,6 @@ public class PeticionesDAOImpl implements PeticionesDAO {
 	    q.setParameter("correo", correo);
 
 		List<Peticiones> peticiones = q.getResultList();
-		peticiones.size();
 		em.close();
 		return peticiones;
 	}
@@ -69,7 +67,6 @@ public class PeticionesDAOImpl implements PeticionesDAO {
 	    q.setParameter("compania", compania);
 
 		List<Peticiones> peticiones = q.getResultList();
-		peticiones.size();
 		em.close();
 		return peticiones;
 	}

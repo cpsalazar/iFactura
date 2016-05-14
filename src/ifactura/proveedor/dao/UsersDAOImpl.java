@@ -44,21 +44,21 @@ public class UsersDAOImpl implements UsersDAO {
 		Query q = em.createQuery("select t from Users t");
 
 		List<Users> usuarios = q.getResultList();
-		usuarios.size();
 		em.close();
 		return usuarios;
 	}
 
 	@Override
-	public Users readCorreo(String correo) throws Exception{
+	public List<Users> readCorreo(String correo) {
 		
 		EntityManager em = EMFService.get().createEntityManager();
-		Users user = em.find(Users.class, correo);
-		if (user == null){
-			throw new Exception("No se encuentra el User con correo: " + correo);
-		}
+		
+		Query q = em.createQuery("select t from Users t where t.correo = :correo");
+	    q.setParameter("correo", correo);
+
+		List<Users> usuarios = q.getResultList();
 		em.close();
-		return user;
+		return usuarios;
 	}
 
 	@Override
@@ -70,7 +70,6 @@ public class UsersDAOImpl implements UsersDAO {
 	    q.setParameter("compania", compania);
 
 		List<Users> usuarios = q.getResultList();
-		usuarios.size();
 		em.close();
 		return usuarios;
 	}

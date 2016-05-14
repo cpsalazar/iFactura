@@ -13,11 +13,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>iFactura</title>
 	<!-- Bootstrap core CSS -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../fonts/css/font-awesome.min.css" rel="stylesheet">
-	<link href="../css/animate.min.css" rel="stylesheet">
+	<link href="../../proveedor/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../proveedor/fonts/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../proveedor/css/animate.min.css" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="../css/custom.css" rel="stylesheet">
+	<link href="../../proveedor/css/custom.css" rel="stylesheet">
 </head>
 <body class="nav-md">
 	<c:if test="${user == 'iFactura'}">

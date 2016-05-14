@@ -6,12 +6,12 @@ import javax.servlet.http.*;
 
 import ifactura.cliente.dao.FacturaTelefonoDao;
 import ifactura.cliente.dao.FacturaTelefonoDaoImpl;
+import ifactura.proveedor.dao.UsersDAO;
+import ifactura.proveedor.dao.UsersDAOImpl;
 import ifactura.cliente.dao.UsuarioClienteDao;
 import ifactura.cliente.dao.UsuarioClienteDaoImpl;
 import ifactura.cliente.model.FacturaTelefono;
 import ifactura.cliente.model.UsuarioCliente;
-import ifactura.proveedor.dao.UsersDAO;
-import ifactura.proveedor.dao.UsersDAOImpl;
 
 @SuppressWarnings("serial")
 public class ISST_G09_SubastasServlet extends HttpServlet {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import ifactura.cliente.model.FacturaTelefono;
 
+
 public interface FacturaTelefonoDao {
 
 	/**

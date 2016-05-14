@@ -43,25 +43,25 @@
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Descripción de la subasta:</label>
 											<div class="col-md-6">
-												<input name="descripcion" class="form-control" placeholder="Introduzca descripción">
+												<input name="descripcion" class="form-control" placeholder="Introduzca descripción" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Nº usuarios:</label>
 											<div class="col-md-6">
-												<input name="usuarios" class="form-control numeric" placeholder="Introduzca número de usuarios">
+												<input name="usuarios" class="form-control numeric" placeholder="Introduzca número de usuarios" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Fecha de finalización:</label>
 											<div class="col-md-6">
-												<input name="fecha" class="form-control" placeholder="Introduzca fecha">
+												<input name="fecha" class="form-control" placeholder="Introduzca fecha" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Puja inicial:</label>
 											<div class="col-md-6">
-												<input name="puja_inicial" class="form-control numeric" step="0.25" placeholder="Introduzca la puja inicial">
+												<input name="puja_inicial" class="form-control numeric" step="0.25" placeholder="Introduzca la puja inicial" required>
 											</div>
 										</div>
 										<div class="form-group">

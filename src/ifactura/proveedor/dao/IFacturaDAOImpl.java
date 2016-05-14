@@ -7,7 +7,6 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import ifactura.proveedor.model.IFactura;
-import ifactura.proveedor.model.Notification;
 
 public class IFacturaDAOImpl implements IFacturaDAO {
 
@@ -38,7 +37,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 		return subasta;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<IFactura> readIFactura() {
 		
@@ -47,7 +45,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 		Query q = em.createQuery("select t from IFactura t");
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
@@ -61,7 +58,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 	    q.setParameter("descripcion", descripcion);
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
@@ -75,7 +71,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 	    q.setParameter("numUsuarios", numUsuarios);
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
@@ -89,7 +84,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 	    q.setParameter("ganadorActual", ganadorActual);
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
@@ -103,7 +97,6 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 	    q.setParameter("pujaActual", pujaActual);
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
@@ -117,20 +110,21 @@ public class IFacturaDAOImpl implements IFacturaDAO {
 	    q.setParameter("fechaFin", fechaFin);
 
 		List<IFactura> subastas = q.getResultList();
-		subastas.size();
 		em.close();
 		return subastas;
 	}
 	
 	@Override
-	public IFactura readIFactura_id(Long id) throws Exception{
+	public List<IFactura> readIFactura_id(Long id) {
+
 		EntityManager em = EMFService.get().createEntityManager();
-		IFactura subasta = em.find(IFactura.class, id);
-		if (subasta == null){
-			throw new Exception("No se encuentra la subasta con id: " + id);
-		}
+		
+		Query q = em.createQuery("select t from IFactura t where t.id = :id");
+	    q.setParameter("id", id);
+
+		List<IFactura> subastas = q.getResultList();
 		em.close();
-		return subasta;
+		return subastas;
 	}
 
 	@Override

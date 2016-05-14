@@ -1,10 +1,11 @@
 package ifactura.proveedor.servlet;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Properties;
 
+import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -12,6 +13,7 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -98,7 +100,7 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 
 							try {
 								Message msg = new MimeMessage(session);
-								msg.setFrom(new InternetAddress("subasta@ifactura-proveedor.appspotmail.com", "iFactura"));
+								msg.setFrom(new InternetAddress("subasta@ifactura-integrado.appspotmail.com", "iFactura"));
 								msg.addRecipient(Message.RecipientType.TO, new InternetAddress(dao1.readCompania(f.getGanadorActual()).get(0).getCorreo(), f.getGanadorActual()));
 								msg.setSubject("Ganador subasta");
 								msg.setText(msgBody);
@@ -123,27 +125,22 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 			} else {
 				req.getSession().setAttribute("notificaciones", null);
 			}
-			try {
-				if (dao1.readCorreo(user) != null){
-					try {
-						List<Peticiones> comprobacion = dao2.readCorreo(user);
-						if (comprobacion.size() > 0){
-							req.getSession().setAttribute("peticion", new ArrayList<Peticiones>(dao2.readCorreo(user)));
-						} else {
-							req.getSession().setAttribute("peticion", null);
-						}
-					} catch (Exception e) {
-						e.printStackTrace();
-					}			
-					compania = dao1.readCorreo(user).getCompania();
-					//req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
-				} else {
-					user = null;
-					req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicacion");
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if (dao1.readCorreo(user).size() > 0){
+				try {
+					List<Peticiones> comprobacion = dao2.readCorreo(user);
+					if (comprobacion.size() > 0){
+						req.getSession().setAttribute("peticion", new ArrayList<Peticiones>(dao2.readCorreo(user)));
+					} else {
+						req.getSession().setAttribute("peticion", null);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}			
+				compania = dao1.readCorreo(user).get(0).getCompania();
+				//req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
+			} else {
+				user = null;
+				req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicacion");
 			}
 			
 			url = userService.createLogoutURL(req.getRequestURI());

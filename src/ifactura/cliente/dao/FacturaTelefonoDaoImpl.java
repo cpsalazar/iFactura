@@ -1,11 +1,12 @@
 package ifactura.cliente.dao;
 
 import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+
 import ifactura.cliente.dao.FacturaTelefonoDao;
 import ifactura.cliente.model.FacturaTelefono;
-import ifactura.proveedor.dao.EMFService;
 
 public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 	/** The instance. */
@@ -64,7 +65,6 @@ public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 		Query q = em.createQuery("select t from FacturaTelefono t");
 
 		List<FacturaTelefono> facturas = q.getResultList();
-		facturas.size();
 		em.close();
 		return facturas;
 	}
@@ -82,7 +82,6 @@ public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 		} else {
 			// Si llega a este punto tenemos un problema
 		}
-		facturas.size();
 		em.close();
 		return facturaReturn;
 	}

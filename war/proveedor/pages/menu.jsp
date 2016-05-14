@@ -13,11 +13,11 @@
 				<div class="menu_section">
 					<ul class="nav side-menu">
 						<li><a href="/isst_g09_ifactura"><i class="fa fa-table"></i>
-								Subastas en curso <span class="fa fa-chevron-down"></span></a></li>
+								Subastas en curso</a></li>
 						<li><a href="/historial"><i class="fa fa-bar-chart-o"></i>
-								Historial de subastas <span class="fa fa-chevron-down"></span></a></li>
+								Historial de subastas</a></li>
 						<li><a href="/proveedor/pages/peticiones.jsp"><i class="fa fa-edit"></i>
-								Petición de subastas <span class="fa fa-chevron-down"></span></a></li>
+								Petición de subastas</a></li>
 					</ul>
 				</div>
 			</div>

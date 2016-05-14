@@ -1,4 +1,5 @@
 package ifactura.proveedor.servlet;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -49,7 +50,7 @@ public class ISST_G09_ValorarPropuestaServlet extends HttpServlet {
 
 	      try {
 	        Message msg = new MimeMessage(session);
-	        msg.setFrom(new InternetAddress("valoracionSubasta@ifactura-proveedor.appspotmail.com", "Valoracion de subasta"));
+	        msg.setFrom(new InternetAddress("valoracionSubasta@ifactura-integrado.appspotmail.com", "Valoracion de subasta"));
 	        msg.addRecipient(Message.RecipientType.TO, new InternetAddress(correo, "Estimado cliente"));
 	        msg.setSubject("Valoracion de subasta");
 	        if (boton.equals("aceptar")){

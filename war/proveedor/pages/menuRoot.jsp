@@ -16,35 +16,30 @@
 							<a href="/isst_g09_ifactura">
 								<i class="fa fa-table"></i>
 								Subastas en curso
-								<span class="fa fa-chevron-down"></span>
 							</a>
 						</li>
 						<li>
 							<a href="/proveedor/pages/historialRoot.jsp">
 								<i class="fa fa-bar-chart-o"></i>
 								Historial de subastas
-								<span class="fa fa-chevron-down"></span>
 							</a>
 						</li>
 						<li>
 							<a href="/proveedor/pages/peticionesRecibidas.jsp">
 								<i class="fa fa-wpforms"></i>
 								Peticiones recibidas
-								<span class="fa fa-chevron-down"></span>
 							</a>
 						</li>
 						<li>
 							<a href="/investigacion">
 								<i class="fa fa-wpforms"></i>
 								Búsqueda de Patrones
-								<span class="fa fa-chevron-down"></span>
 							</a>
 						</li>
 						<li>
 							<a href="/proveedor/pages/nuevaSubasta.jsp">
 								<i class="fa fa-edit"></i>
 								Crear subasta
-								<span class="fa fa-chevron-down"></span>
 							</a>
 						</li>
 					</ul>

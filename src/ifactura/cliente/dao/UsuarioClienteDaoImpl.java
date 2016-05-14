@@ -7,7 +7,6 @@ import javax.persistence.Query;
 
 import ifactura.cliente.dao.UsuarioClienteDao;
 import ifactura.cliente.model.UsuarioCliente;
-import ifactura.proveedor.dao.EMFService;
 
 public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
 
@@ -71,7 +70,6 @@ public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
 		} else {
 			// Si llega a este punto tenemos un problema
 		}
-		usuarios.size();
 		em.close();
 		return usuarioReturn;
 	}
