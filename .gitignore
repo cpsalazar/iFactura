@@ -1,6 +1,10 @@
 #################
 ## Eclipse
 #################
+*target*
+*.jar
+*.war
+*.ear
 
 *.pydevproject
 .project
