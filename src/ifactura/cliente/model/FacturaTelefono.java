@@ -26,36 +26,36 @@ public class FacturaTelefono implements Serializable {
 	private Date fechaFacturacion;
 
 	/** The datos contradados. */
-	private double datosContradados;
+	private Double datosContratados;
 
 	/** The datos consumidos. */
-	private double datosConsumidos;
+	private Double datosConsumidos;
 
 	/** The voz contradada. */
-	private double vozContradada;
+	private Double vozContratada;
 
 	/** The voz consumida. */
-	private double vozConsumida;
+	private Double vozConsumida;
 
 	/** The importe total. */
-	private double importeTotal;
+	private Double importeTotal;
 
 	/** The id usuario. */
 	private Long idUsuario;
 
 	/** The es tarde. */
 	private Boolean esTarde;
-	
-	
-	
-	public FacturaTelefono(Date fechaFacturacion, Double datosContradados,
-			Double datosConsumidos, Double vozContradada, Double vozConsumida,
-			Double importeTotal, Long idUsuario, Boolean esTarde) {
+
+	public FacturaTelefono() {
+	}
+
+	public FacturaTelefono(Date fechaFacturacion, Double datosContradados, Double datosConsumidos, Double vozContratada,
+			Double vozConsumida, Double importeTotal, Long idUsuario, Boolean esTarde) {
 		super();
 		this.fechaFacturacion = fechaFacturacion;
-		this.datosContradados = datosContradados;
+		this.datosContratados = datosContradados;
 		this.datosConsumidos = datosConsumidos;
-		this.vozContradada = vozContradada;
+		this.vozContratada = vozContratada;
 		this.vozConsumida = vozConsumida;
 		this.importeTotal = importeTotal;
 		this.idUsuario = idUsuario;
@@ -105,18 +105,18 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the datosContradados
 	 */
-	public double getDatosContradados() {
-		return datosContradados;
+	public Double getDatosContratados() {
+		return datosContratados;
 	}
 
 	/**
 	 * Sets the datos contradados.
 	 *
-	 * @param datosContradados
+	 * @param datosContratados
 	 *            the datosContradados to set
 	 */
-	public void setDatosContradados(Double datosContradados) {
-		this.datosContradados = datosContradados;
+	public void setDatosContratados(Double datosContratados) {
+		this.datosContratados = datosContratados;
 	}
 
 	/**
@@ -143,18 +143,18 @@ public class FacturaTelefono implements Serializable {
 	 *
 	 * @return the vozContradada
 	 */
-	public Double getVozContradada() {
-		return vozContradada;
+	public Double getVozContratada() {
+		return vozContratada;
 	}
 
 	/**
 	 * Sets the voz contradada.
 	 *
-	 * @param vozContradada
+	 * @param vozContratada
 	 *            the vozContradada to set
 	 */
-	public void setVozContradada(Double vozContradada) {
-		this.vozContradada = vozContradada;
+	public void setVozContratada(Double vozContratada) {
+		this.vozContratada = vozContratada;
 	}
 
 	/**

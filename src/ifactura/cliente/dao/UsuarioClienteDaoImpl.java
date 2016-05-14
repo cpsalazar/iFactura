@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import ifactura.cliente.dao.UsuarioClienteDao;
 import ifactura.cliente.model.UsuarioCliente;
 
 public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
@@ -72,6 +71,22 @@ public class UsuarioClienteDaoImpl implements UsuarioClienteDao {
 		}
 		em.close();
 		return usuarioReturn;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public UsuarioCliente getUsuarioByName(String user) {
+		EntityManager em = EMFService.get().createEntityManager();
+		Query q = em.createQuery("select user from UsuarioCliente user where usuario = :user");
+		q.setParameter("user", user);
+
+		UsuarioCliente usuarioCliente = null;
+		List<UsuarioCliente> usuariosCliente = q.getResultList();
+		if (usuariosCliente.size() > 0) {
+			usuarioCliente = usuariosCliente.get(0);
+		}
+		em.close();
+		return usuarioCliente;
 	}
 
 }

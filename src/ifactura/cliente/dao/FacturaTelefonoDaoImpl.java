@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import ifactura.cliente.dao.FacturaTelefonoDao;
 import ifactura.cliente.model.FacturaTelefono;
 
 public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
@@ -57,11 +56,11 @@ public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 		em.close();
 		return facturaTelefono;
 	}
-	
+
 	@Override
 	public List<FacturaTelefono> readFacturas() {
 		EntityManager em = EMFService.get().createEntityManager();
-		
+
 		Query q = em.createQuery("select t from FacturaTelefono t");
 
 		List<FacturaTelefono> facturas = q.getResultList();
@@ -84,5 +83,14 @@ public class FacturaTelefonoDaoImpl implements FacturaTelefonoDao {
 		}
 		em.close();
 		return facturaReturn;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<FacturaTelefono> getFacturasById(Long idUsuario) {
+		EntityManager em = EMFService.get().createEntityManager();
+		Query query = em.createQuery("select f from FacturaTelefono f where idUsuario = :idUsuario");
+		query.setParameter("idUsuario", idUsuario);
+		return query.getResultList();
 	}
 }

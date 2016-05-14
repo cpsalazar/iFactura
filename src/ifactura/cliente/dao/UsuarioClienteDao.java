@@ -42,4 +42,13 @@ public interface UsuarioClienteDao {
 	 */
 	UsuarioCliente getUsuario(Long idUsuario);
 
+	/**
+	 * Gets the usuario by name.
+	 *
+	 * @param user
+	 *            the user
+	 * @return the usuario by name
+	 */
+	UsuarioCliente getUsuarioByName(String user);
+
 }

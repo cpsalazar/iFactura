@@ -4,14 +4,16 @@ import java.util.List;
 
 import ifactura.cliente.model.FacturaTelefono;
 
-
+/**
+ * The Interface FacturaTelefonoDao.
+ */
 public interface FacturaTelefonoDao {
 
 	/**
 	 * Creates the.
 	 *
-	 * @param FacturaTelefono
-	 *            the usuario cliente
+	 * @param facturaTelefono
+	 *            the factura telefono
 	 * @return the usuario cliente
 	 */
 	FacturaTelefono create(FacturaTelefono facturaTelefono);
@@ -19,16 +21,16 @@ public interface FacturaTelefonoDao {
 	/**
 	 * Removes the.
 	 *
-	 * @param idUsario
-	 *            the id usario
+	 * @param idFactura
+	 *            the id factura
 	 */
 	void remove(Long idFactura);
 
 	/**
 	 * Merge.
 	 *
-	 * @param FacturaTelefono
-	 *            the usuario cliente
+	 * @param facturaTelefono
+	 *            the factura telefono
 	 * @return the usuario cliente
 	 */
 	FacturaTelefono merge(FacturaTelefono facturaTelefono);
@@ -41,8 +43,21 @@ public interface FacturaTelefonoDao {
 	 * @return the usuario
 	 */
 	FacturaTelefono getUsuario(Long idFactura);
-	
+
+	/**
+	 * Read facturas.
+	 *
+	 * @return the list
+	 */
 	public List<FacturaTelefono> readFacturas();
-	
+
+	/**
+	 * Gets the facturas by id.
+	 *
+	 * @param idUsuario
+	 *            the id usuario
+	 * @return the facturas by id
+	 */
+	List<FacturaTelefono> getFacturasById(Long idUsuario);
 
 }
