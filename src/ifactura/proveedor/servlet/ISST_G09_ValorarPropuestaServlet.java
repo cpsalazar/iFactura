@@ -27,14 +27,14 @@ public class ISST_G09_ValorarPropuestaServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		String compania =  req.getParameter("compania");
 		String peticion = req.getParameter("id");
-		String aceptar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido aceptada por el equipo de iFactura, cuando lancemos su subasta se le notificará por medio de la aplicación.";
+		String aceptar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido aceptada por el equipo de iFactura, cuando lancemos su subasta se le notificarï¿½ por medio de la aplicaciï¿½n.";
 		String rechazar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido rechazada por el equipo de iFactura.";
 		String aceptarn = "Su propuesta (" + peticion + ") ha sido aceptada.";
 		String rechazarn = "Su propuesta (" + peticion + ") ha sido rechazada.";
 		String aceptat= "Propuesta Aceptada";
 		String rechazat = "Propuesta Rechazada";
 		String textoe = "Pendiente de proponer la subasta (" + peticion+").";
-		String peticionl = "Tienes una petición pendiente ("+peticion+")";
+		String peticionl = "Tienes una peticiÃ³n pendiente ("+peticion+")";
 		String imagenn = "";
 		String imagenp = "auction.png";
 		String boton = req.getParameter("solicitud");
@@ -52,7 +52,7 @@ public class ISST_G09_ValorarPropuestaServlet extends HttpServlet {
 	        Message msg = new MimeMessage(session);
 	        msg.setFrom(new InternetAddress("valoracionSubasta@ifactura-integrado.appspotmail.com", "Valoracion de subasta"));
 	        msg.addRecipient(Message.RecipientType.TO, new InternetAddress(correo, "Estimado cliente"));
-	        msg.setSubject("Valoracion de subasta");
+	        msg.setSubject("ValoraciÃ³n de subasta");
 	        if (boton.equals("aceptar")){
 		        msg.setText(aceptar);
 		        imagenn="aceptada.png";

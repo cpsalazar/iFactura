@@ -43,7 +43,7 @@
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
-								<div class="col-lg-12">
+								<div class="col-xs-12">
 									<div class="panel panel-default">
 										<!-- /.panel-heading -->
 										<div class="panel-body">
@@ -129,13 +129,19 @@
 											</table>
 										</div>
 									</div>
+									<c:if test="${alerta == 'Su petición de subasta se ha registrado correctamente'}">
+										<div class="alert alert-success fade in" style="font-size: 14px;">
+											<a class="close" href="#" data-dismiss="alert">x</a>
+											<strong>Petición satisfactoria: </strong><c:out value="${alerta}" />, se le enviará un correo electrónico a su cuenta con la decisión tomada
+										</div>
+									</c:if>
 									<c:if test="${alerta == 'Vas ganando la subasta'}">
 										<div class="alert alert-success fade in" style="font-size: 14px;">
 											<a class="close" href="#" data-dismiss="alert">x</a>
 											<strong>Puja satisfactoria: </strong><c:out value="${alerta}" />
 										</div>
 									</c:if>
-									<c:if test="${alerta != null && alerta != 'Vas ganando la subasta'}">
+									<c:if test="${alerta != null && alerta != 'Vas ganando la subasta' && alerta != 'Su petición de subasta se ha registrado correctamente'}">
 										<div class="alert alert-danger fade in" style="color: white; font-size: 14px;">
 											<a class="close" href="#" data-dismiss="alert">x</a>
 											<strong>Error: </strong><c:out value="${alerta}" />

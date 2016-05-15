@@ -35,38 +35,38 @@
 					<div class="clearfix"></div>
 					<!-- /.row -->
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-xs-12">
 							<div class="panel panel-default">
 								<!-- /.panel-heading -->
 								<div class="panel-body">
 									<form class="form-horizontal" action="/crearSubasta" method="post" id="creacion-subasta">
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Descripción de la subasta:</label>
-											<div class="col-md-6">
+											<div class="col-xs-12 col-md-6">
 												<input name="descripcion" class="form-control" placeholder="Introduzca descripción" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Nº usuarios:</label>
-											<div class="col-md-6">
+											<div class="col-xs-12 col-md-6">
 												<input name="usuarios" class="form-control numeric" placeholder="Introduzca número de usuarios" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Fecha de finalización:</label>
-											<div class="col-md-6">
+											<div class="col-xs-12 col-md-6">
 												<input name="fecha" class="form-control" placeholder="Introduzca fecha" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="control-label col-md-2 col-md-offset-2">Puja inicial:</label>
-											<div class="col-md-6">
+											<div class="col-xs-12 col-md-6">
 												<input name="puja_inicial" class="form-control numeric" step="0.25" placeholder="Introduzca la puja inicial" required>
 											</div>
 										</div>
 										<div class="form-group">
-											<div class="col-md-6">
-												<input type="submit" class="btn btn-primary btn-form" value="Enviar">	
+											<div class="col-xs-12 col-md-12" style="margin-left: -9%; text-align: center;">
+												<input type="submit" class="btn btn-primary btn-form" value="Enviar" style="position: relative;">	
 											</div>
 										</div>
 									</form>

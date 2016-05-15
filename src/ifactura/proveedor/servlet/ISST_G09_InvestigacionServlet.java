@@ -64,13 +64,13 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 
 		if (totaldatos > facturas.size() / 20) {
 			String texto = "Se han detectado " + totaldatos
-					+ " clientes que consumen  mns datos de los contratados, y que de media consumen " + DatosMedia
+					+ " clientes que consumen más datos de los contratados, y que de media consumen " + DatosMedia
 					+ " MB.";
 			req.getSession().setAttribute("DatosdeMas", texto);
 		}
 		if (totalvoz > facturas.size() / 20) {
 			String texto = "Se han detectado " + totalvoz
-					+ " clientes que consumen  mns minutos de los contratados, y que de media consumen " + VozMedia
+					+ " clientes que consumen más minutos de los contratados, y que de media consumen " + VozMedia
 					+ " minutos.";
 			req.getSession().setAttribute("VozdeMas", texto);
 		}
@@ -81,7 +81,7 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 		}
 		if (totalmananas > facturas.size() / 20) {
 			String texto = "Se han detectado " + totalmananas
-					+ " clientes que realizan llamadas exclusivamente por la ma�ana.";
+					+ " clientes que realizan llamadas exclusivamente por la mañana.";
 			req.getSession().setAttribute("Mananas", texto);
 		}
 

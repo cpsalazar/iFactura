@@ -48,7 +48,7 @@
 											<p><c:out value="${peticion.peticion}" /></p>
 											<input name="solicitud" type="radio" value="aceptar" />Aceptar solicitud
             								<input name="solicitud" type="radio" value="declinar" />Declinar solicitud          
-            								<input type="submit"  value="Enviar" />
+            								<input type="submit"  value="Enviar" class="btn btn-primary"/>
 										</form>	
 									</c:forEach>
 								</div>

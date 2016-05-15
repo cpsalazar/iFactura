@@ -58,7 +58,7 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 		String alerta = null;
 		String compania = null;
 		
-		if (req.getSession().getAttribute("puja") == null){
+		if (req.getSession().getAttribute("puja") == null) {
 			req.getSession().setAttribute("alerta", alerta);
 		} else {
 			req.getSession().setAttribute("puja", null);
@@ -96,7 +96,7 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 							Properties props = new Properties();
 							Session session = Session.getDefaultInstance(props, null);
 
-							String msgBody = "Ha ganado la subasta (" + f.getDescripcion() + "), nos pondremos en contacto con usted para que nos indique la oferta que le realizará a los usuarios que comprenden la subasta. Recuerde que estos usuarios permanecerán en el anonimato";
+							String msgBody = "Ha ganado la subasta (" + f.getDescripcion() + "), nos pondremos en contacto con usted para que nos indique la oferta que le realizarï¿½ a los usuarios que comprenden la subasta. Recuerde que estos usuarios permanecerï¿½n en el anonimato";
 
 							try {
 								Message msg = new MimeMessage(session);
@@ -140,7 +140,7 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 				//req.getSession().setAttribute("notificaciones", new ArrayList<Notification>(daonot.readCorreo(user)));
 			} else {
 				user = null;
-				req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicacion");
+				req.getSession().setAttribute("mensaje", "No tiene permisos para acceder a esta aplicaciÃ³n");
 			}
 			
 			url = userService.createLogoutURL(req.getRequestURI());

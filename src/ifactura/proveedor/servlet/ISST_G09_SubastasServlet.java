@@ -68,7 +68,7 @@ public class ISST_G09_SubastasServlet extends HttpServlet {
 		dao2.create(user18);
 		UsuarioCliente user19 = new UsuarioCliente("Jose Luis l");
 		dao2.create(user19);
-		UsuarioCliente user20 = new UsuarioCliente("Jose Luis ñ");
+		UsuarioCliente user20 = new UsuarioCliente("Jose Luis jk");
 		dao2.create(user20);
 		UsuarioCliente user21 = new UsuarioCliente("Jose Luis z");
 		dao2.create(user21);

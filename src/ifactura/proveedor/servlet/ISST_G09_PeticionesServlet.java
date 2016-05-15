@@ -18,20 +18,24 @@ public class ISST_G09_PeticionesServlet extends HttpServlet {
 		String peticion = req.getParameter("peticion");
 		String compania =  (String) req.getSession().getAttribute("user");
 		String master = "ifacturag09@gmail.com";
-		String titulo = "Nueva PeticiÛn";
+		String titulo = "Nueva Petici√≥n";
 		String imagenp = "peticion.png";
-		String peticionl = "Tienes una peticiÛn pendiente ("+peticion+")";
+		String peticionl = "Tienes una petici√≥n pendiente ("+peticion+")";
 		
 		PeticionesDAO dao = PeticionesDAOImpl.getInstance();
 		NotificationDAO dao2 = NotificationDAOImpl.getInstance();
+		String alerta = "No se ha podido crear la subasta";
 		
 		String user = req.getUserPrincipal().getName();
 
 		if (user != null) {
 			dao.create(user, compania, peticion);
 			dao2.create(master, peticionl, titulo, imagenp);
+			alerta = "Su petici√≥n de subasta se ha registrado correctamente";
 		}
-				
+		
+		req.getSession().setAttribute("alerta", alerta);
+		req.getSession().setAttribute("puja", "true");
 		resp.sendRedirect("/isst_g09_ifactura");
 	}
 }
