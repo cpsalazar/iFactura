@@ -96,7 +96,7 @@ public class ISST_G09_iFacturaServlet extends HttpServlet {
 							Properties props = new Properties();
 							Session session = Session.getDefaultInstance(props, null);
 
-							String msgBody = "Ha ganado la subasta (" + f.getDescripcion() + "), nos pondremos en contacto con usted para que nos indique la oferta que le realizar� a los usuarios que comprenden la subasta. Recuerde que estos usuarios permanecer�n en el anonimato";
+							String msgBody = "Ha ganado la subasta (" + f.getDescripcion() + "), nos pondremos en contacto con usted para que nos indique la oferta que le realizará a los usuarios que comprenden la subasta. Recuerde que estos usuarios permanecerán en el anonimato";
 
 							try {
 								Message msg = new MimeMessage(session);

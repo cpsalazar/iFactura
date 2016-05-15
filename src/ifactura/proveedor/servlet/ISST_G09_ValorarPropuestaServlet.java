@@ -27,7 +27,7 @@ public class ISST_G09_ValorarPropuestaServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		String compania =  req.getParameter("compania");
 		String peticion = req.getParameter("id");
-		String aceptar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido aceptada por el equipo de iFactura, cuando lancemos su subasta se le notificar� por medio de la aplicaci�n.";
+		String aceptar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido aceptada por el equipo de iFactura, cuando lancemos su subasta se le notificará por medio de la aplicación.";
 		String rechazar = "Estimado " + compania + ", su propuesta (" + peticion + ") ha sido rechazada por el equipo de iFactura.";
 		String aceptarn = "Su propuesta (" + peticion + ") ha sido aceptada.";
 		String rechazarn = "Su propuesta (" + peticion + ") ha sido rechazada.";
