@@ -1,3 +1,6 @@
+
+<h2 style="font-family: Fondamento;">Subida de Factura Manual</h2>
+
 <form id="formTelefono" class="form-horizontal" action="/newFactura"
 	method="post" role="form">
 	<input type="hidden" class="form-control" name="tipo" id="tipo"
@@ -67,7 +70,7 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-default">Añade Factura</button>
+			<button type="submit" class="btn ">Añade Factura</button>
 		</div>
 	</div>
 	<a href="/isst_g08_ifactura" id="returnToFactura">Volver a Facturas</a>

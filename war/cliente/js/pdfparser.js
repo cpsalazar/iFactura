@@ -53,7 +53,7 @@ $(function() {
 
 		// Step 3:Read the file as ArrayBuffer
 		fileReader.readAsArrayBuffer(file);
-
+		$("#submit").show();
 	});
 });
 

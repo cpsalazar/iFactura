@@ -75,7 +75,7 @@ public class DeleteFacturaServlet extends HttpServlet {
 				facturaDevuelta.setImporteTotal(factura.getImporteTotal());
 				facturaDevuelta.setVozConsumida(factura.getVozConsumida());
 				facturaDevuelta.setVozContratada(factura.getVozContratada());
-				facturaDevuelta.setEsTarde(factura.getEsTarde());
+				facturaDevuelta.setEsTarde(factura.getEsTarde() ? "Tarde" : "Mañana");
 
 				facturasObtenidas.add(facturaDevuelta);
 			}

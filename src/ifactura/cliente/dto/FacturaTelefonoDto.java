@@ -29,13 +29,13 @@ public class FacturaTelefonoDto {
 	private Long idUsuario;
 
 	/** The es tarde. */
-	private Boolean esTarde;
+	private String esTarde;
 
 	public FacturaTelefonoDto() {
 	}
 
 	public FacturaTelefonoDto(String fechaFacturacion, Double datosContratados, Double datosConsumidos,
-			Double vozContratada, Double vozConsumida, Double importeTotal, Long idUsuario, Boolean esTarde) {
+			Double vozContratada, Double vozConsumida, Double importeTotal, Long idUsuario, String esTarde) {
 		super();
 		this.fechaFacturacion = fechaFacturacion;
 		this.datosContratados = datosContratados;
@@ -200,18 +200,18 @@ public class FacturaTelefonoDto {
 	 *
 	 * @return the esTarde
 	 */
-	public Boolean getEsTarde() {
+	public String getEsTarde() {
 		return esTarde;
 	}
 
 	/**
 	 * Sets the es tarde.
 	 *
-	 * @param esTarde
+	 * @param string
 	 *            the esTarde to set
 	 */
-	public void setEsTarde(Boolean esTarde) {
-		this.esTarde = esTarde;
+	public void setEsTarde(String string) {
+		this.esTarde = string;
 	}
 
 }

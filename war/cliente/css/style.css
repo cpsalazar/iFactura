@@ -32,6 +32,7 @@ body1 {
 	background-size: cover;
 	-webkit-filter: blur(5px);
 	z-index: 0;
+	background-size: cover;
 }
 
 bodyHome {
@@ -47,11 +48,37 @@ bodyHome {
 	bottom: -40px;
 	width: auto;
 	height: auto;
+	/* Location of the image */
 	background-image:
 		url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	/* Background image is centered vertically and horizontally at all times */
+	background-position: center center;
+	/* Background image doesn't tile */
+	background-repeat: no-repeat;
+	/* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+	background-attachment: fixed;
+	/* This is what makes the background image rescale based
+     on the container's size */
 	background-size: cover;
+	/* Set a background color that will be displayed
+     while the background image is loading */
+	background-color: #464646;
 	-webkit-filter: blur(5px);
 	z-index: 0;
+	-webkit-filter: blur(5px);
+	background-position: center center;
+	/* Background image doesn't tile */
+	background-repeat: no-repeat;
+	/* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+	background-attachment: fixed;
+	/* This is what makes the background image rescale based
+     on the container's size */
+	background-size: cover;
+	/* Set a background color that will be displayed
+     while the background image is loading */
+	background-color: #464646;
 }
 
 .grad {

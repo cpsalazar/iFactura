@@ -35,10 +35,8 @@
 <!-- CSS reset -->
 <link rel="stylesheet" href="../../cliente/css/faq-style.css">
 
-
-
 </head>
-<body style="font-family: Exo">
+<body style="font-family: 'Exo'">
 
 
 	<div id="wrapper">
@@ -53,25 +51,67 @@
 				<div class="row">
 
 
-					<div id="facturasDiv">
-						<div style="padding-left: 70px; padding-right: 70px;">
-							<h2 style="text-align: -webkit-center; font-family: Fondamento;">Facturas
-								Telefono</h2>
-							<c:if test="${existenFacturasTelefono != null}">
-								<%@ include file="facturastelefono.jsp"%>
-							</c:if>
-						</div>
-					</div>
-					<c:if test="${existenFacturasTelefono != null}">
-						<canvas id="myChart"></canvas>
-					</c:if>
+					<h2 style="font-family: Fondamento; text-align: center;">Ofertas
+						Disponibles</h2>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
 
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class="img-responsive center-block"
+									src="../../cliente/images/ofertas/oferta_movistar.jpg"
+									alt="Movistar">
+							</div>
+
+							<div class="item">
+								<img class="img-responsive center-block"
+									src="../../cliente/images/ofertas/oferta_vodafone.jpg"
+									alt="Vodafone">
+							</div>
+
+							<div class="item">
+								<img class="img-responsive center-block"
+									src="../../cliente/images/ofertas/oferta_orange.jpg"
+									alt="Orange">
+							</div>
+
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button"
+							data-slide="prev"> <span
+							class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a> <a class="right carousel-control" href="#myCarousel"
+							role="button" data-slide="next"> <span
+							class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					<div style="text-align: center;">
+						<p>Estas ofertas han sido seleccionadas para usted basandose
+							en su consumo</p>
+						<br> <br> <br>
+						<p>Si desea recibir facturas personalizadas en su correo,
+							pulse aquí</p>
+						<input id="ofertas" class="btn" type="submit"
+							value="Recibir Ofertas"> <br> <br> <br>
+						<p>
+							¿No encuentra ofertas interesantes?<a href=""> Pulse aquí
+								para generar nuevas ofertas</a>
+						</p>
+					</div>
 
 				</div>
+				<!-- /#page-content-wrapper -->
 			</div>
 		</div>
-		<!-- /#page-content-wrapper -->
-
 	</div>
 	<!-- /#wrapper -->
 
@@ -86,7 +126,16 @@
 			$("#wrapper").toggleClass("toggled");
 		});
 	</script>
-
+	<script>
+		$("#ofertas").click(function(e) {
+			e.preventDefault();
+			alert("Gracias, sus preferencias se han guardado");
+		});
+	</script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 	<script src="../../cliente/js/jquery.dataTables.js"></script>
 	<script src="../../cliente/js/tablaFacturas.js"></script>
 	<script src="../../cliente/js/pdf.js"></script>
@@ -94,7 +143,5 @@
 	<script src="../../cliente/js/pdfparser.js"></script>
 	<script src="../../cliente/js/chart.min.js"></script>
 	<script src="../../cliente/js/graficos.js"></script>
-
-
 </body>
 </html>

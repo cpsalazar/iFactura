@@ -24,10 +24,17 @@
 <link href="../../cliente/css/simple-sidebar.css" rel="stylesheet">
 <link href="../../cliente/css/style.css" rel="stylesheet">
 <link href="../../cliente/css/animate.min.css" rel="stylesheet">
-</head>
-<body>
-	<div class="bodyHome"></div>
 
+<link href='https://fonts.googleapis.com/css?family=Fondamento'
+	rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="../../cliente/css/reset.css">
+<!-- CSS reset -->
+<link rel="stylesheet" href="../../cliente/css/faq-style.css">
+
+
+</head>
+<body style="font-family: 'Exo'">
 
 	<div id="wrapper">
 
@@ -39,7 +46,8 @@
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
 				<div class="row">
-					<div id="formularioTelefono">
+					<div id="formularioTelefono"
+						style="position: fixed; left: 45%; width: 1000;">
 						<%@ include file="formulariotelefono.jsp"%>
 					</div>
 				</div>

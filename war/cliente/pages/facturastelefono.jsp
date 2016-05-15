@@ -1,10 +1,10 @@
 
 <!--  table id="tabla_telefono" class="display well" cellspacing="0" 	width="100%">
 -->
-<table id="tabla_telefono" class="display dataTable" cellspacing="0"
-	width="100%">
+<table id="tabla_telefono" class="table table-striped table-hover"
+	cellspacing="0" width="100%">
 
-	<thead>
+	<thead style="background-color: black; color: white;">
 		<tr>
 			<th style="display: none;">Factura</th>
 			<th>Fecha Facturacion</th>
@@ -13,7 +13,7 @@
 			<th>Voz Contratada</th>
 			<th>Voz Consumida</th>
 			<th>Importe</th>
-			<th>Es Tarde</th>
+			<th>Horario</th>
 			<th></th>
 		</tr>
 	</thead>

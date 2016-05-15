@@ -24,10 +24,19 @@
 <link href="../../cliente/css/simple-sidebar.css" rel="stylesheet">
 <link href="../../cliente/css/style.css" rel="stylesheet">
 <link href="../../cliente/css/animate.min.css" rel="stylesheet">
-</head>
-<body>
-	<div class="bodyHome"></div>
 
+<link rel="stylesheet" href="../../cliente/css/reset.css">
+<!-- CSS reset -->
+<link rel="stylesheet" href="../../cliente/css/faq-style.css">
+
+<link href='https://fonts.googleapis.com/css?family=Fondamento'
+	rel='stylesheet' type='text/css'>
+<!-- Resource style -->
+<script src="../../cliente/js/modernizr.js"></script>
+<!-- Modernizr -->
+
+</head>
+<body style="font-family: 'Exo'">
 
 	<div id="wrapper">
 
@@ -38,42 +47,147 @@
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
-				<div class="row">Lorem fistrum te voy a borrar el cerito te va
-					a hasé pupitaa sexuarl apetecan caballo blanco caballo negroorl ese
-					hombree apetecan mamaar hasta luego Lucas ese que llega. Mamaar al
-					ataquerl por la gloria de mi madre diodeno va usté muy cargadoo no
-					te digo trigo por no llamarte Rodrigor no te digo trigo por no
-					llamarte Rodrigor pupita va usté muy cargadoo. Ahorarr a peich me
-					cago en tus muelas se calle ustée me cago en tus muelas por la
-					gloria de mi madre ese hombree fistro. Quietooor qué dise usteer
-					está la cosa muy malar quietooor. Jarl al ataquerl ese hombree a
-					peich diodenoo. A wan tiene musho peligro va usté muy cargadoo
-					quietooor caballo blanco caballo negroorl diodenoo. Ese pedazo de
-					sexuarl por la gloria de mi madre no te digo trigo por no llamarte
-					Rodrigor ese pedazo de papaar papaar sexuarl benemeritaar torpedo
-					pupita ese hombree. Ese pedazo de condemor condemor ese que llega
-					ese que llega. Caballo blanco caballo negroorl benemeritaar no te
-					digo trigo por no llamarte Rodrigor a peich va usté muy cargadoo
-					pecador diodeno me cago en tus muelas. Jarl al ataquerl te va a
-					hasé pupitaa diodenoo sexuarl ese hombree. Qué dise usteer qué dise
-					usteer diodenoo va usté muy cargadoo me cago en tus muelas
-					benemeritaar. Está la cosa muy malar jarl caballo blanco caballo
-					negroorl ahorarr ese pedazo de no te digo trigo por no llamarte
-					Rodrigor fistro te voy a borrar el cerito te va a hasé pupitaa ese
-					pedazo de. No te digo trigo por no llamarte Rodrigor la caidita
-					caballo blanco caballo negroorl benemeritaar a peich al ataquerl
-					benemeritaar diodenoo qué dise usteer torpedo está la cosa muy
-					malar. Papaar papaar ese que llega sexuarl pecador va usté muy
-					cargadoo apetecan ahorarr tiene musho peligro. Apetecan no te digo
-					trigo por no llamarte Rodrigor me cago en tus muelas apetecan no te
-					digo trigo por no llamarte Rodrigor por la gloria de mi madre
-					caballo blanco caballo negroorl quietooor tiene musho peligro
-					mamaar mamaar. Benemeritaar tiene musho peligro se calle ustée qué
-					dise usteer de la pradera ese hombree sexuarl la caidita papaar
-					papaar está la cosa muy malar ese pedazo de. Hasta luego Lucas está
-					la cosa muy malar ahorarr qué dise usteer a gramenawer ahorarr ese
-					hombree amatomaa te voy a borrar el cerito quietooor sexuarl. Está
-					la cosa muy malar ese pedazo de se calle ustée llevame al sircoo.</div>
+				<div class="row">
+
+					<h2 style="text-align: -webkit-center; font-family: Fondamento;">FAQ</h2>
+
+
+					<section class="cd-faq">
+
+						<!-- cd-faq-categories -->
+
+						<div class="cd-faq-items">
+							<ul id="basics" class="cd-faq-group">
+								<li class="cd-faq-title"><h2>Sobre nosotros</h2></li>
+								<li><a class="cd-faq-trigger" href="#0">¿Quiénes somos?</a>
+									<div class="cd-faq-content">
+										<p>Somos el equipo de iFactura, un grupo de ingenieros
+											dispuestos a facilitar su tarea de administración y gestión
+											de facturas.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">Misión</a>
+									<div class="cd-faq-content">
+										<p>Comprometernos con nuestros clientes, ofreciéndoles la
+											posibilidad de almacenar, organizar y consultar sus facturas.
+											Además contamos con un sistema de calidad y confianza que
+											analiza los datos almacenados de sus facturas para poder
+											proponer cambios en sus ofertas con el fin de ocasionarle un
+											ahorro considerable.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">Visión</a>
+									<div class="cd-faq-content">
+										<p>Ser la empresa reconocida como líder a nivel nacional
+											en el desarrollo, calidad e innovación de soluciones para
+											factura electrónica, que permita a nuestros clientes un
+											ahorro económico.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">Valores</a>
+									<div class="cd-faq-content">
+										<p>
+											CONFIABILIDAD. Seguridad y calidad en la funcionalidad y
+											eficiencia de los productos y servicios que ofrecemos a
+											nuestros clientes. Confianza en nuestro personal.<br>
+											RAPIDEZ. Desarrollar soluciones en poco tiempo y calidad de
+											producto.<br> HONESTIDAD. Actuar sin engaños, con
+											rectitud y honradez, para fomentar la confianza de nuestros
+											clientes en los productos y servicios que ofrecemos, así como
+											la confianza dentro del equipo de trabajo.<br>
+											EFICIENCIA. Lograr nuestro objetivo principal de satisfacer y
+											cubrir íntegramente las necesidades de nuestros clientes.<br>
+											INNOVACIÓN. Generar nuevos productos y servicios que agilicen
+											los procesos operacionales de las Empresas, utilizando
+											nuestra tecnología.<br> TRABAJO EN EQUIPO. Unificar
+											fuerzas y lograr objetivos comunes. Compartir
+											responsabilidades y éxitos.
+										</p>
+									</div> <!-- cd-faq-content --></li>
+							</ul>
+							<!-- cd-faq-group -->
+
+							<ul id="mobile" class="cd-faq-group">
+								<li class="cd-faq-title"><h2>Uso de la aplicación</h2></li>
+								<li><a class="cd-faq-trigger" href="#0">¿Cómo subo una
+										factura?</a>
+									<div class="cd-faq-content">
+										<p>Una vez identificado con su cuenta en la aplicación,
+											pulse sobre el menú izquierdo en Añadir Factura, y seleccione
+											sobre el desplegable si desea hacerlo manualmente o subiendo
+											un PDF a la aplicación. Si lo hace manualmente, solo tiene
+											que ingresar los datos y aceptar la nueva factura. En la
+											opción de PDF, seleccione y suba su archivo en formato PDF, y
+											automáticamente se agregarán sus datos a su historial de
+											facturas.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">¿Cómo recibo
+										ofertas?</a>
+									<div class="cd-faq-content">
+										<p>Pulse en el menú izquierdo sobre la opción Ofertas para
+											ver las ofertas disponibles. Si quiere suscribirse a nuestro
+											servicio, marque la opcion correspondiente. Automáticamente,
+											recibirá ofertas por correo electrónico cada vez que
+											detectemos que puede contratar una tarifa más beneficiosa en
+											función de su consumo.</p>
+									</div> <!-- cd-faq-content --></li>
+
+							</ul>
+							<!-- cd-faq-group -->
+
+							<ul id="account" class="cd-faq-group">
+								<li class="cd-faq-title"><h2>Errores</h2></li>
+								<li><a class="cd-faq-trigger" href="#0">No puedo abrir
+										la aplicación</a>
+									<div class="cd-faq-content">
+										<p>La aplicación se encuentra aún en fase previa a
+											lanzamiento, por lo que puede detectar errores de vez en
+											cuando. Pruebe a recargar la página o a desloguearse y volver
+											a ingresar en la aplicación. Si no funciona, puede que
+											estemos trabajando en nuestros servidores y el servicio se
+											encuentre no disponible momentáneamente. Perdone las
+											molestias.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">No aparecen mis
+										facturas</a>
+									<div class="cd-faq-content">
+										<p>Recargue la página, ya que probablemente su nueva
+											factura aún se esté procesando.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">No recibo
+										correos con ofertas</a>
+									<div class="cd-faq-content">
+										<p>Corrobore que ha seguido el paso de autorizarnos a
+											utilizar su correo electrónico. Para ello, pulse sobre la
+											opción Ofertas en el menú de la izquierda. Si ha seguido ya
+											este paso y sigue sin recibir ofertas, por favor, contacte
+											con nosotros directamente. Sentimos las molestias.</p>
+									</div> <!-- cd-faq-content --></li>
+
+								<li><a class="cd-faq-trigger" href="#0">No puedo
+										identificarme</a>
+									<div class="cd-faq-content">
+										<p>La identificación se realiza mediante el sistema de
+											Google. Corrobore que ha empleado un correo electrónico
+											válido (terminado en @gmail.com) y que ha accedido con su
+											contraseña actual. Si continúa con el problema, contacte con
+											nosotros directamente. Su información no se perderá en ningún
+											caso.</p>
+									</div> <!-- cd-faq-content --></li>
+							</ul>
+							<!-- cd-faq-group -->
+
+						</div>
+						<!-- cd-faq-items -->
+						<a href="#0" class="cd-close-panel">Close</a>
+					</section>
+					<!-- cd-faq -->
+					<!-- Resource jQuery -->
+
+				</div>
 			</div>
 		</div>
 		<!-- /#page-content-wrapper -->
@@ -92,6 +206,9 @@
 			$("#wrapper").toggleClass("toggled");
 		});
 	</script>
+	<script src="../../cliente/js/jquery-2.1.1.js"></script>
+	<script src="../../cliente/js/jquery.mobile.custom.min.js"></script>
+	<script src="../../cliente/js/main.js"></script>
 
 	<script src="../../cliente/js/jquery.dataTables.js"></script>
 	<script src="../../cliente/js/tablaFacturas.js"></script>

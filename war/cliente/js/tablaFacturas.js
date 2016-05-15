@@ -30,7 +30,7 @@ $(function() {
 													"sSortDescending" : ": Activar para ordenar la columna de manera descendente"
 												}
 											},
-											"jQueryUI" : true
+											responsive : true
 										});
 					});
 
@@ -45,9 +45,6 @@ $(function() {
 		});
 		event.preventDefault();
 	});
-});
-$(function() {
-
 });
 
 $(function() {

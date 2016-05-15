@@ -40,6 +40,9 @@
 		<div style="padding-bottom: 15px; padding-top: 15px">
 			<a id="registrationLink" href="">Registrate</a>
 		</div>
+		<a href="/comun/pages/login.jsp" style="display: block;">
+			<p style="margin: 0;">Volver</p>
+		</a>
 	</div>
 	<div class="login" id="registrationDiv" class="container clearfix"
 		style="display: none">
