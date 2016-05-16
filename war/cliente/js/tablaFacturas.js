@@ -42,6 +42,7 @@ $(function() {
 			id : id
 		}, function(data) {
 			alert("Factura borrada correctamente");
+			window.location.reload()
 		});
 		event.preventDefault();
 	});

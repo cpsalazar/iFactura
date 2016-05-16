@@ -34,10 +34,12 @@
 	</div>
 
 	<div class="form-group">
-		<label class="control-label col-sm-2" for="esTarde">Es Tarde:</label>
+		<label class="control-label col-sm-2" for="esTarde">Horario:</label>
 		<div class="col-sm-1">
-			<input type="checkbox" class="form-control" name="esTarde"
-				id="esTarde">
+			<select class="form-control" name="esTarde" id="esTarde">
+				<option value="false">Mañana</option>
+				<option value="saab">Tarde</option>
+			</select>
 		</div>
 	</div>
 

@@ -65,6 +65,10 @@
 					<c:if test="${existenFacturasTelefono != null}">
 						<canvas id="myChart"></canvas>
 					</c:if>
+					<c:if test="${existenFacturasTelefono == null}">
+						<h5 style="text-align: -webkit-center; font-family: Fondamento;">!Añade
+							una factura para empezar a usar iFactura!</h5>
+					</c:if>
 
 
 				</div>
