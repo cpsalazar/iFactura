@@ -144,6 +144,8 @@ public class ISST_G09_SubastasServlet extends HttpServlet {
 		FacturaTelefono factura29 = new FacturaTelefono(fecha, 3000.0, 1250.0, 1000.0, 106.2, 30.2, user29.getId(), false);
 		FacturaTelefono factura30 = new FacturaTelefono(fecha, 3000.0, 1250.0, 1000.0, 106.2, 30.2, user30.getId(), true);
 		FacturaTelefono factura31 = new FacturaTelefono(fecha, 4000.0, 1250.0, 1000.0, 106.2, 30.2, user31.getId(), true);
+		FacturaTelefono factura32 = new FacturaTelefono();
+
 		
 		dao3.create(factura1);
 		dao3.create(factura2);
@@ -176,6 +178,7 @@ public class ISST_G09_SubastasServlet extends HttpServlet {
 		dao3.create(factura29);
 		dao3.create(factura30);
 		dao3.create(factura31);
+		dao3.create(factura32);
 		
 	}
 }

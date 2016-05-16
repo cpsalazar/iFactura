@@ -37,22 +37,26 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 		double totalmananas = 0;
 
 		for (FacturaTelefono fac : facturas) {
-
-			if (fac.getDatosConsumidos() > fac.getDatosContratados()) {
-				DatosMedia += fac.getDatosConsumidos();
-				totaldatos++;
+			if (fac.getDatosConsumidos() != null && fac.getDatosContratados() != null){
+				if (fac.getDatosConsumidos() > fac.getDatosContratados()) {
+					DatosMedia += fac.getDatosConsumidos();
+					totaldatos++;
+				}
 			}
-			if (fac.getVozConsumida() > fac.getVozContratada()) {
-				VozMedia += fac.getVozConsumida();
-				totalvoz++;
+			if (fac.getVozConsumida() != null && fac.getVozContratada() != null){
+				if (fac.getVozConsumida() > fac.getVozContratada()) {
+					VozMedia += fac.getVozConsumida();
+					totalvoz++;
+				}
 			}
-			if (fac.getEsTarde()) {
-				totaltarde++;
-			}
-			if (!fac.getEsTarde()) {
-				totalmananas++;
-			}
-
+			if (fac.getEsTarde() != null){
+				if (fac.getEsTarde()) {
+					totaltarde++;
+				}
+				if (!fac.getEsTarde()) {
+					totalmananas++;
+				}
+			}	
 		}
 		DatosMedia = DatosMedia / totaldatos;
 		VozMedia = VozMedia / totalvoz;
@@ -64,13 +68,13 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 
 		if (totaldatos > facturas.size() / 20) {
 			String texto = "Se han detectado " + totaldatos
-					+ " clientes que consumen mÃ¡s datos de los contratados, y que de media consumen " + DatosMedia
+					+ " clientes que consumen más datos de los contratados, y que de media consumen " + DatosMedia
 					+ " MB.";
 			req.getSession().setAttribute("DatosdeMas", texto);
 		}
 		if (totalvoz > facturas.size() / 20) {
 			String texto = "Se han detectado " + totalvoz
-					+ " clientes que consumen mÃ¡s minutos de los contratados, y que de media consumen " + VozMedia
+					+ " clientes que consumen más minutos de los contratados, y que de media consumen " + VozMedia
 					+ " minutos.";
 			req.getSession().setAttribute("VozdeMas", texto);
 		}
@@ -81,7 +85,7 @@ public class ISST_G09_InvestigacionServlet extends HttpServlet {
 		}
 		if (totalmananas > facturas.size() / 20) {
 			String texto = "Se han detectado " + totalmananas
-					+ " clientes que realizan llamadas exclusivamente por la maÃ±ana.";
+					+ " clientes que realizan llamadas exclusivamente por la mañana.";
 			req.getSession().setAttribute("Mananas", texto);
 		}
 
