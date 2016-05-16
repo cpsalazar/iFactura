@@ -229,4 +229,85 @@ public class FacturaTelefono implements Serializable {
 		this.esTarde = esTarde;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((datosConsumidos == null) ? 0 : datosConsumidos.hashCode());
+		result = prime * result + ((datosContratados == null) ? 0 : datosContratados.hashCode());
+		result = prime * result + ((esTarde == null) ? 0 : esTarde.hashCode());
+		result = prime * result + ((fechaFacturacion == null) ? 0 : fechaFacturacion.hashCode());
+		result = prime * result + ((idFactura == null) ? 0 : idFactura.hashCode());
+		result = prime * result + ((idUsuario == null) ? 0 : idUsuario.hashCode());
+		result = prime * result + ((importeTotal == null) ? 0 : importeTotal.hashCode());
+		result = prime * result + ((vozConsumida == null) ? 0 : vozConsumida.hashCode());
+		result = prime * result + ((vozContratada == null) ? 0 : vozContratada.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		FacturaTelefono other = (FacturaTelefono) obj;
+		if (datosConsumidos == null) {
+			if (other.datosConsumidos != null)
+				return false;
+		} else if (!datosConsumidos.equals(other.datosConsumidos))
+			return false;
+		if (datosContratados == null) {
+			if (other.datosContratados != null)
+				return false;
+		} else if (!datosContratados.equals(other.datosContratados))
+			return false;
+		if (esTarde == null) {
+			if (other.esTarde != null)
+				return false;
+		} else if (!esTarde.equals(other.esTarde))
+			return false;
+		if (fechaFacturacion == null) {
+			if (other.fechaFacturacion != null)
+				return false;
+		} else if (!fechaFacturacion.equals(other.fechaFacturacion))
+			return false;
+		if (idFactura == null) {
+			if (other.idFactura != null)
+				return false;
+		} else if (!idFactura.equals(other.idFactura))
+			return false;
+		if (idUsuario == null) {
+			if (other.idUsuario != null)
+				return false;
+		} else if (!idUsuario.equals(other.idUsuario))
+			return false;
+		if (importeTotal == null) {
+			if (other.importeTotal != null)
+				return false;
+		} else if (!importeTotal.equals(other.importeTotal))
+			return false;
+		if (vozConsumida == null) {
+			if (other.vozConsumida != null)
+				return false;
+		} else if (!vozConsumida.equals(other.vozConsumida))
+			return false;
+		if (vozContratada == null) {
+			if (other.vozContratada != null)
+				return false;
+		} else if (!vozContratada.equals(other.vozContratada))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "FacturaTelefono [idFactura=" + idFactura + ", fechaFacturacion=" + fechaFacturacion
+				+ ", datosContratados=" + datosContratados + ", datosConsumidos=" + datosConsumidos + ", vozContratada="
+				+ vozContratada + ", vozConsumida=" + vozConsumida + ", importeTotal=" + importeTotal + ", idUsuario="
+				+ idUsuario + ", esTarde=" + esTarde + "]";
+	}
+
 }

@@ -70,63 +70,66 @@ public class UploadFacturaServlet extends HttpServlet {
 			for (int i = 0; i <= size - 1; i++) {
 				String[] obtenido = arrayData[i].split(":");
 				String[] datos = null;
+				if (obtenido.length == 2) {
+					switch (obtenido[0]) {
+					case "Importe":
+						datos = obtenido[1].trim().split(" ");
+						importeTotal = Double.parseDouble(datos[0]);
+						break;
+					case "Datos Contratados":
+						datos = obtenido[1].trim().split(" ");
+						datosContratados = Double.parseDouble(datos[0]);
+						break;
+					case "Datos Consumidos":
+						datos = obtenido[1].trim().split(" ");
+						datosConsumidos = Double.parseDouble(datos[0]);
+						break;
+					case "Voz Contratada":
+						datos = obtenido[1].trim().split(" ");
+						vozContratada = Double.parseDouble(datos[0]);
+						break;
+					case "Voz Consumida":
+						datos = obtenido[1].trim().split(" ");
+						vozConsumida = Double.parseDouble(datos[0]);
+						break;
+					case "Horario":
+						if (obtenido[1].trim().equalsIgnoreCase("Tarde")) {
+							esTarde = true;
+						} else {
+							esTarde = false;
+						}
+						break;
+					case "Fecha Emision":
+						String fecha = obtenido[1].trim();
+						SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+						try {
+							fechaFacturacion = formatter.parse(fecha);
+						} catch (ParseException e) {
+							e.printStackTrace();
+						}
+						break;
 
-				switch (obtenido[0]) {
-				case "Importe":
-					datos = obtenido[1].trim().split(" ");
-					importeTotal = Double.parseDouble(datos[0]);
-					break;
-				case "Datos Contratados":
-					datos = obtenido[1].trim().split(" ");
-					datosContratados = Double.parseDouble(datos[0]);
-					break;
-				case "Datos Consumidos":
-					datos = obtenido[1].trim().split(" ");
-					datosConsumidos = Double.parseDouble(datos[0]);
-					break;
-				case "Voz Contratada":
-					datos = obtenido[1].trim().split(" ");
-					vozContratada = Double.parseDouble(datos[0]);
-					break;
-				case "Voz Consumida":
-					datos = obtenido[1].trim().split(" ");
-					vozConsumida = Double.parseDouble(datos[0]);
-					break;
-				case "Horario":
-					if (obtenido[1].trim().equalsIgnoreCase("Tarde")) {
-						esTarde = true;
-					} else {
-						esTarde = false;
+					default:
+						break;
 					}
-					break;
-				case "Fecha Emision":
-					String fecha = obtenido[1].trim();
-					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-					try {
-						fechaFacturacion = formatter.parse(fecha);
-					} catch (ParseException e) {
-						e.printStackTrace();
-					}
-					break;
-
-				default:
-					break;
 				}
 			}
 
 		}
+		if (idUsuario != null && importeTotal != null && datosContratados != null && datosConsumidos != null
+				&& esTarde != null && vozContratada != null && vozConsumida != null && fechaFacturacion != null) {
+			FacturaTelefono newFacturaTelefono = new FacturaTelefono();
+			newFacturaTelefono.setIdUsuario(idUsuario);
+			newFacturaTelefono.setImporteTotal(importeTotal);
+			newFacturaTelefono.setDatosContratados(datosContratados);
+			newFacturaTelefono.setDatosConsumidos(datosConsumidos);
+			newFacturaTelefono.setEsTarde(esTarde);
+			newFacturaTelefono.setVozContratada(vozContratada);
+			newFacturaTelefono.setVozConsumida(vozConsumida);
+			newFacturaTelefono.setFechaFacturacion(fechaFacturacion);
 
-		FacturaTelefono newFacturaTelefono = new FacturaTelefono();
-		newFacturaTelefono.setIdUsuario(idUsuario);
-		newFacturaTelefono.setImporteTotal(importeTotal);
-		newFacturaTelefono.setDatosContratados(datosContratados);
-		newFacturaTelefono.setDatosConsumidos(datosConsumidos);
-		newFacturaTelefono.setEsTarde(esTarde);
-		newFacturaTelefono.setVozContratada(vozContratada);
-		newFacturaTelefono.setVozConsumida(vozConsumida);
-		newFacturaTelefono.setFechaFacturacion(fechaFacturacion);
-
-		FacturaTelefonoDao.create(newFacturaTelefono);
+			FacturaTelefonoDao.create(newFacturaTelefono);
+		}
 
 	}
 

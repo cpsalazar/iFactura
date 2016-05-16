@@ -38,7 +38,7 @@
 		<div class="col-sm-1">
 			<select class="form-control" name="esTarde" id="esTarde">
 				<option value="false">Mañana</option>
-				<option value="saab">Tarde</option>
+				<option value="true">Tarde</option>
 			</select>
 		</div>
 	</div>
